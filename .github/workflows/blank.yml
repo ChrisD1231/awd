@@ -1,0 +1,12 @@
+$Body = @{
+  name = "bitcoin"
+  crypto = $true
+  discord_bot_token = "xxxxxxxxxxxxxxxxxxxxxxxxx"
+}
+ 
+$Parameters = @{
+    Method = "POST"
+    Uri =  "127.0.0.1:8080/ticker"
+    Body = ($Body | ConvertTo-Json) 
+    ContentType = "application/json"
+}
